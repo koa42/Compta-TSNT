@@ -1,5 +1,5 @@
-// Configuration Supabase : renseigner ces deux valeurs après création du projet.
+// Configuration Supabase
 window.TSNT_CONFIG = {
-  SUPABASE_URL: "https://VOTRE-PROJET.supabase.co",
-  SUPABASE_ANON_KEY: "VOTRE_CLE_ANON_PUBLIQUE"
+  SUPABASE_URL: "https://cgdsfyxlibocmmrbtyfm.supabase.co",
+  SUPABASE_ANON_KEY: "sb_publishable_Wgw7uaxoO3tnUpDkZVT53Q__KP2vicf"
 };
