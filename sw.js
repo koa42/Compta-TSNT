@@ -1,4 +1,4 @@
-const CACHE="compta-tsnt-v1";
+const CACHE="compta-tsnt-v2";
 const APP_SHELL=["./","./index.html","./style.css","./app.js","./config.js","./manifest.json","./icons/icon.svg"];
 self.addEventListener("install",event=>event.waitUntil(caches.open(CACHE).then(c=>c.addAll(APP_SHELL))));
 self.addEventListener("activate",event=>event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k))))));
