@@ -8,6 +8,16 @@
 <link rel="manifest" href="./manifest.json">
 <link rel="icon" href="./icons/icon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="./style.css?v=mobile-fix-4">
+<style id="iphone-layout-fix">
+@media screen and (max-width:700px) {
+  .product-grid { grid-template-columns: minmax(0,1fr) !important; }
+  .product { width:100% !important; min-width:0 !important; }
+  .product .product-foot { display:flex; flex-wrap:wrap; min-width:0; width:100%; gap:8px; }
+  .product .product-foot button { flex:1 1 auto; min-width:0 !important; max-width:100% !important; white-space:normal !important; overflow-wrap:anywhere; font-size:14px !important; padding:9px 10px !important; line-height:1.2; }
+  .product .product-foot + .product-foot { display:grid !important; grid-template-columns:minmax(0,1fr) !important; }
+  .product .product-foot + .product-foot button { width:100% !important; }
+}
+</style>
 <title>Compta TSNT</title>
 </head>
 <body>
