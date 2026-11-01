@@ -59,3 +59,13 @@ begin
 end $$;
 grant execute on function public.tsnt_checkout(text,jsonb) to authenticated;
 grant execute on function public.tsnt_cancel_order(uuid) to authenticated;
+-- Active la diffusion temps réel pour que les autres téléphones voient les changements.
+do $$
+begin
+ if not exists (
+   select 1 from pg_publication_tables
+   where pubname='supabase_realtime' and schemaname='public' and tablename='records'
+ ) then
+   alter publication supabase_realtime add table public.records;
+ end if;
+end $$;
