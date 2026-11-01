@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#123c32">
+<meta name="description" content="Comptabilité partagée de l'association Tous Solidaires Néo-Tuileries">
+<link rel="manifest" href="./manifest.json">
+<link rel="icon" href="./icons/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="./style.css">
+<title>Compta TSNT</title>
+</head>
+<body>
+<div id="login" class="login-wrap">
+  <div class="login-card">
+    <div class="brand-mark">TSNT</div>
+    <p class="eyebrow">TOUS SOLIDAIRES NÉO-TUILERIES</p>
+    <h1>Compta <span>TSNT</span></h1>
+    <p class="muted">La gestion de l'association, au même endroit.</p>
+    <form id="login-form">
+      <label>Adresse e-mail<input id="email" type="email" autocomplete="username" required placeholder="vous@exemple.fr"></label>
+      <label>Mot de passe<input id="password" type="password" autocomplete="current-password" required placeholder="••••••••"></label>
+      <button class="primary full" type="submit">Se connecter</button>
+    </form>
+    <p id="login-error" class="error" role="alert"></p>
+    <p class="tiny muted">Les accès sont créés par un responsable de l'association.</p>
+  </div>
+</div>
+<div id="app" class="app hidden">
+  <header class="topbar">
+    <div class="brand-line"><div class="brand-mark small">T</div><div><strong>Compta TSNT</strong><small>Tous Solidaires Néo-Tuileries</small></div></div>
+    <div class="top-actions"><span id="sync-status" class="sync"><i></i> En ligne</span><button id="logout" class="icon-btn" aria-label="Déconnexion" title="Déconnexion">↗</button></div>
+  </header>
+  <main id="view" class="content"></main>
+  <nav class="bottom-nav" aria-label="Navigation principale">
+    <button data-page="home" class="active"><span>⌂</span>Accueil</button>
+    <button data-page="stock"><span>▦</span>Stock</button>
+    <button data-page="bar"><span>＋</span>Buvette</button>
+    <button data-page="accounts"><span>€</span>Compta</button>
+    <button data-page="more"><span>•••</span>Plus</button>
+  </nav>
+</div>
+<div id="toast" class="toast" role="status"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="./config.js"></script>
+<script src="./app.js"></script>
+</body>
+</html>

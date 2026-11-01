@@ -1,0 +1,13 @@
+{
+  "name": "Compta TSNT",
+  "short_name": "Compta TSNT",
+  "description": "Comptabilité partagée de Tous Solidaires Néo-Tuileries",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f4f6f4",
+  "theme_color": "#123c32",
+  "icons": [
+    {"src":"./icons/icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}
+  ]
+}
